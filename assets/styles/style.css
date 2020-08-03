@@ -13,6 +13,7 @@
     --preview-bg: rgb(251, 249, 243, 0.8);
     --preview-shadow: #f0ead6;
 
+    --nav-active: #17a2b8;
     --btn-color: #000;
 }
 
@@ -60,7 +61,8 @@ p, li, span, label, input, textarea {
 .section1 {
     background-color: var(--main-color);
     border-bottom: 1px solid var(--border-color);
-    overflow: auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .section2 {
@@ -84,11 +86,11 @@ p, li, span, label, input, textarea {
     box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-    "nav nav"
-    "top top"
-    "left right";
+    "nav nav nav"
+    "top top top"
+    "left right right";
 }
 
 /* NAVIGATION */
@@ -100,6 +102,10 @@ p, li, span, label, input, textarea {
     align-items: center;
     border-radius: 5px 5px 0 0;
     background-color: var(--main-color);
+}
+
+.menu {
+    padding: 0 3%;
 }
 
 #navigation a{
@@ -114,6 +120,14 @@ p, li, span, label, input, textarea {
 #navigation li {
     display: inline-block;
     margin: 0 5px;
+}
+
+#navigation li a:hover {
+    color: var(--nav-active);
+}
+
+#navigation .current {
+    color: var(--nav-active);
 }
 
 .dots-wrapper {
@@ -184,6 +198,7 @@ p, li, span, label, input, textarea {
 .left-column {
     grid-area: left;
     padding: 50px 0;
+    margin: 0 auto;
 }
 
 #profile-pic {
@@ -192,7 +207,8 @@ p, li, span, label, input, textarea {
     height: 200px;
     width: 200px;
     object-fit: cover;
-    border: 2px solid var(--border-color);
+    border: 1px solid transparent;
+    border-radius: 150px;
 }
 
 #theme-options-wrapper {
@@ -203,31 +219,8 @@ p, li, span, label, input, textarea {
 .theme-dot {
     height: 30px;
     width: 30px;
-    border-radius: 50%;
     cursor: pointer;
-    background-color: #000;
     margin: 5px;
-    border: 2px solid var(--theme-border);
-    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-}
-
-.theme-dot:hover {
-    border-width: 5px;
-}
-
-#light-mode {
-    background-color: #fff;
-}
-#blue-mode {
-    background-color: #192734;
-}
-#green-mode {
-    background-color: #78866b;
-}
-#purple-mode {
-    background-color: #7E4C74;
 }
 
 #settings-note {
@@ -241,55 +234,110 @@ p, li, span, label, input, textarea {
     line-height: 0px;
 }
 
-
 /* RIGHT SIDE */
 .right-column {
     grid-area: right;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 30px 0 60px 0;
+    text-align: center;
+}
+.folder-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-content: center;
     padding: 30px 0 60px 0;
 }
 
-#preview-shadow {
-    background-color: var(--preview-shadow);
-    height: 180px;
-    width: 300px;
-    padding: 30px 0 0 30px;
-}
 
-#preview  {
-    width: 300px;
-    border: 1.5px solid #17a2b8;
-    background-color: var(--preview-bg);
-    padding: 15px;
+/* FOLDERS */
+.folder {
+    /* This will enable the 3D effect. Decrease this value
+     * to make the perspective more pronounced: */
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    perspective: 800px;
     position: relative;
+    z-index: 0;
+    width: 160px;
+    height: 120px;
+    margin-right: 90px;
 }
 
-.corner {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    border: 1.5px solid #17a2b8;
-    background-color: #fff;
+.folder div {
+    width:230px;
+    height:185px;
+    background-color:#93bad8;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-75px;
+}
+
+.folder .front{
+    border-radius:5px 5px 0 0;
+    
+    -moz-transform:rotateX(-30deg);
+    -webkit-transform:rotateX(-30deg);
+    transform:rotateX(-30deg);
+
+    -moz-transform-origin:50% 100%;
+    -webkit-transform-origin:50% 100%;
+    transform-origin:50% 100%;
+
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+
+    box-shadow:0 -2px 2px rgba(0,0,0,0.1), 0 1px rgba(255,255,255,0.35) inset;
+
+    z-index:10;
+    color: #5A88A9;
+    text-align: center;
+    padding: 5px;
+}
+
+.folder .front h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.folder .back{
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+    background-image: linear-gradient(top, #93bad8 0%, #89afcc 10%, #5985a5 60%);
+
+    border-radius:0 5px 0 0;
+    box-shadow:0 -1px 1px rgba(0,0,0,0.15);
+}
+
+/* The top part */
+.folder .back:before{
+    content:'';
+    width:60px;
+    height:10px;
+    border-radius:4px 4px 0 0;
+    background-color:#93bad8;
     position: absolute;
+    top:-10px;
+    left:0px;
+    box-shadow:0 -1px 1px rgba(0,0,0,0.15);
 }
 
-#corner-tl {
-    top: -5px;
-    left: -5px;
+/* The shadow */
+.folder .back:after{
+    content:'';
+    width:100%;
+    height:4px;
+    border-radius:5px;
+    position: absolute;
+    bottom:5px;
+    left:0px;
+    box-shadow:0 4px 8px #333;
 }
-#corner-tr {
-    top: -5px;
-    right: -5px;
-}
-#corner-br {
-    bottom: -5px;
-    right: -5px;
-}
-#corner-bl {
-    bottom: -5px;
-    left: -5px;
-}
+
 
 /* ABOUT SECTION */
 .about-wrapper {
@@ -305,14 +353,12 @@ p, li, span, label, input, textarea {
     background-color: var(--preview-shadow);
 }
 
-.social-links {
-    display: grid;
+.about-facts {
     align-content: center;
-    text-align: center;
+    text-align: left;
 }
-
-#social-image {
-    width: 100%;
+.about-facts ul li {
+    padding-bottom: 1%;
 }
 
 /* POSTS */
