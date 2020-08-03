@@ -4,63 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Specializing in responsive designs, custom and dynamic web solutions with the help of HTML5, CSS3, JavaScript and WordPress!">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <link id="theme-style" rel="stylesheet" href="">
-    <script src="scripts/main.js" defer></script>
-    <title>Viktor Cebotarjov</title>
+    <script src="assets/scripts/main.js" defer></script>
+    <title>Viktor | Responsive Web Solutions </title>
 </head>
 
 <body>
 
     <section class="section1">
-        <div class="main-container">
-            <div class="greeting-wrapper">
-                <h1>Hello World!</h1>
+        <!-- nav -->
+        <div class="intro-wrapper">
+
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
             </div>
 
-            <!-- nav -->
-            <div class="intro-wrapper">
-                <div class="nav-wrapper">
-                    <div class="dots-wrapper">
-                        <div class="browser-dot" id="dot1"></div>
-                        <div class="browser-dot" id="dot2"></div>
-                        <div class="browser-dot" id="dot3"></div>
-                    </div>
-
-                    <ul id="navigation">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Gallery</a></li>
-                    </ul>
+            <nav class="nav-wrapper menu">
+                <div class="dots-wrapper menu-logo">
+                    <div class="browser-dot" id="dot1"></div>
+                    <div class="browser-dot" id="dot2"></div>
+                    <div class="browser-dot" id="dot3"></div>
                 </div>
 
-                <div class="left-column">
-                    <img src="images/viktor2.2.jpg" alt="me" id="profile-pic">
-                    <h5>Personalize Theme</h5>
+                <!-- logo -->
+                <!-- <a href="index.html" class="menu-logo"><img src="assets/images/logo_demo.PNG" class="logo" alt="Proffessional Portfolio Viktor" width="300"></a> -->
 
-                    <div id="theme-options-wrapper">
-                        <div data-mode="light" class="theme-dot" id="light-mode"></div>
-                        <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
-                        <div data-mode="green" class="theme-dot" id="green-mode"></div>
-                        <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
-                    </div>
+                <!-- nav items -->
+                <ul id="navigation" class="menu-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link home current">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="skills.html" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
 
-                    <p id="settings-note">*Theme settings will be saved for<br>yout next visit</p>
+
+            <div class="greeting-wrapper top-column">
+                <h1>
+                    <span>&lt;/Hello world&gt;</span>
+                </h1>
+            </div>
+
+            <div class="left-column">
+                <img src="assets/images/viktor2.2.jpg" alt="me" id="profile-pic">
+                <h5>Personalize Theme</h5>
+
+                <div id="theme-options-wrapper">
+                    <div data-mode="light" class="theme-dot" id="light-mode"></div>
+                    <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
+                    <div data-mode="green" class="theme-dot" id="green-mode"></div>
+                    <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
                 </div>
 
-                <div class="right-column">
-                    <div id="preview-shadow">
-                        <div id="preview">
-                            <div class="corner" id="corner-tl"></div>
-                            <div class="corner" id="corner-tr"></div>
-                            <h3>What I Do</h3>
-                            <p>I build responsive, mobile frienly solutions for the web</p>
-                            <div class="corner" id="corner-br"></div>
-                            <div class="corner" id="corner-bl"></div>
-                        </div>
+                <p id="settings-note">*Theme settings will be saved for<br>yout next visit</p>
+            </div>
+
+            <div class="right-column">
+                <div id="preview-shadow">
+                    <div id="preview">
+                        <div class="corner" id="corner-tl"></div>
+                        <div class="corner" id="corner-tr"></div>
+                        <h3>What I Do</h3>
+                        <p>I build responsive, mobile frienly solutions for the web</p>
+                        <div class="corner" id="corner-br"></div>
+                        <div class="corner" id="corner-bl"></div>
                     </div>
                 </div>
             </div>
@@ -81,7 +104,7 @@
 
                     <h4>Top Expertise</h4>
                     <p>Web Development student with a dream to become a full stack developer
-                        <a target="_blank" href="images/CV_Viktor.pdf">Download Resume</a>
+                        <a target="_blank" href="assets/images/CV_Viktor.pdf">Download Resume</a>
                     </p>
 
                     <div id="skills">
@@ -104,7 +127,7 @@
 
 
                 <div class="social-links">
-                    <img id="social-image" src="images/svale.PNG" alt="img">
+                    <img id="social-image" src="assets/images/svale.PNG" alt="img">
                     <h3>Find Me on LinkedIn and GitHub</h3>
                     <a target="_blank" href="#">LinkedIn</a>
                     <a target="_blank" href="#">GitHub</a>
@@ -120,7 +143,7 @@
                 <div>
                     <!-- work 1 -->
                     <div class="post">
-                        <img src="images/svale.PNG" alt="svale" class="thumbnail">
+                        <img src="assets/images/svale.PNG" alt="svale" class="thumbnail">
                         <div class="post-preview">
                             <h6 class="post-title">Restaurant Website</h6>
                             <p class="post-intro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
@@ -133,7 +156,7 @@
                 <div>
                     <!-- work 2 -->
                     <div class="post">
-                        <img src="images/diabetes.png" alt="svale" class="thumbnail">
+                        <img src="assets/images/diabetes.png" alt="svale" class="thumbnail">
                         <div class="post-preview">
                             <h6 class="post-title">Web Application</h6>
                             <p class="post-intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
@@ -146,7 +169,7 @@
                 <div>
                     <!-- work 3 -->
                     <div class="post">
-                        <img src="images/festival.png" alt="svale" class="thumbnail">
+                        <img src="assets/images/festival.png" alt="svale" class="thumbnail">
                         <div class="post-preview">
                             <h6 class="post-title">Dynamic Webpage</h6>
                             <p class="post-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magnam

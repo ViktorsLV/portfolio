@@ -70,15 +70,8 @@ p, li, span, label, input, textarea {
 }
 
 .main-container {
-    width: 1200px;
+    width: 1250px;
     margin: 0 auto;
-}
-
-.greeting-wrapper {
-    display: grid;
-    text-align: center;
-    align-content: center;
-    min-height: 10em;
 }
 
 .intro-wrapper {
@@ -94,6 +87,7 @@ p, li, span, label, input, textarea {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "nav nav"
+    "top top"
     "left right";
 }
 
@@ -149,6 +143,43 @@ p, li, span, label, input, textarea {
     background-color: #2ACA3E;
 }
 
+/* TOP COLUMN - GREETING */
+.top-column {
+    grid-area: top;
+}
+
+.greeting-wrapper {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+}
+.greeting-wrapper h1 {
+    border-right: 4px solid var(--border-color);
+    animation: typing 2.1s steps(14) 1s 1 normal both, cursor 1s steps(14) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 14ch;
+    margin: 0 auto;
+}
+
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+    100% {
+        width: 14ch;
+    }
+}
+
+@keyframes cursor {
+    from, to {
+        border-color: transparent
+    }
+    90% {
+        border-color: var(--border-color);
+    }
+}
 /* LEFT SIDE */
 .left-column {
     grid-area: left;
@@ -367,16 +398,130 @@ p, li, span, label, input, textarea {
 
 /* Media queries */
 @media  screen and (max-width: 1200px) {
-    .main-container {
-        width: 95%;
-    }
+    
 }
 
-@media  screen and (max-width: 800px) {
+@media  screen and (max-width: 768px) {
+
+    /* HAMBURGER STYLING and NAVIGATION*/
+    .menu {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        width: 100%;
+        visibility: hidden;
+        background: none;
+    }
+    .menu.show {
+        visibility: visible;
+    }
+    ul.menu-nav.show, a.menu-logo.show {
+        transform: translate3d(0, 0, 0);
+    }
+    .menu a.menu-logo {
+        display: block;
+        height: 31vh;
+        width: 100%;
+        background: inherit;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 15vh;
+        background: var(--main-color);
+    }
+    .logo {
+        margin: 5vw auto 0 auto;
+        width: 70px;
+    }
+    .menu-btn {
+        position: fixed;
+        z-index: 100;
+        right: 35px;
+        top: 35px;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+    }
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        background: var(--theme-border);
+        margin-bottom: 5px;
+        transition: all 0.5s ease-out;
+    }
+    /* Styling nav items individual */
+    .menu .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 4rem;
+        padding: 1rem 0;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+    }
+    .nav-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+    .nav-item:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+    .nav-item:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+    .nav-item:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+    .nav-item:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+    /* CLOSING STATE HAMBURGER*/
+    .menu-btn.close {
+        transform: rotate(180deg);
+    }
+    .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6.5px, -6.5px);
+    }
+    /* Styling nav items together */
+    .menu-nav {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-flow: column wrap;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: var(--main-color);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        /* puts it 100% over screen */
+        transition: all 0.5s ease-out;
+    }
+    .menu-nav.show {
+        transform: translate3d(0, 0, 0);
+    }
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        transition: all 0.5s ease-out;
+    }
+    .nav-item.show {
+        transform: translate3d(0, 0, 0);
+    }
     .intro-wrapper {        
         grid-template-columns: 1fr;
         grid-template-areas: 
         "nav"
+        "top"
         "left"
         "right";
     }
