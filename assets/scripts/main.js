@@ -46,13 +46,6 @@ function setTheme(mode) {
     if (mode == 'blue') {
         document.getElementById('theme-style').href= 'assets/styles/blue.css'
     }
-    if (mode == 'green') {
-        document.getElementById('theme-style').href= 'assets/styles/green.css'
-    }
-    if (mode == 'purple') {
-        document.getElementById('theme-style').href= 'assets/styles/purple.css'
-    }
-
     localStorage.setItem('theme', mode)
 }
 
