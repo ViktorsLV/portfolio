@@ -1,21 +1,21 @@
 /* variables */
 /* for switching themes */
 :root {
-    --main-color: #eaeaea;
-    --secondary-color: #fff;
+    --main-color: #cccccc;
+    --secondary-color: rgb(240, 240, 240);
 
-    --border-color: #c1c1c1;
+    --border-color: #abaaaa;
 
     --main-text: #000;
     --secondary-text: #4b5156;
 
     --theme-border: #24292e;
     --preview-bg: rgb(251, 249, 243, 0.8);
-    --preview-shadow: #f0ead6;
+    --preview-shadow: #d8d1ba;
 
     --nav-active: #17a2b8;
-    --btn-color: #f0ead6;
-    --btn-hover: #d6d1be;
+    --btn-color: #d8d1ba;
+    --btn-hover: #f0ead6;
 
     --highlight: #17a2b8;
 }
@@ -483,6 +483,46 @@ main {
     color: var(--secondary-text);
     transition: all 0.5s ease-out;
 }
+
+/* INDIVIDUAL PROJECTS */
+.code-link {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.code-link a {
+    margin-bottom: 1%;
+    transition: 0s;
+}
+.code-link a:hover {
+    color: var(--btn-hover);
+}
+
+.individual-project {
+    width: 80%;
+}
+
+.svale {
+    margin-top: -6%;
+}
+
+.circle-wrapper {
+    width: 40%;
+}
+
+.circle {
+    background-color: var(--preview-shadow);
+    display: inline-block;
+    padding: 0.3% 2%;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    margin-bottom: 1%;
+}
+
+.btn-project {
+    margin: 3% 0;
+}
+
 /* Media queries */
 @media  screen and (max-width: 1200px) {
     

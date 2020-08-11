@@ -1,19 +1,19 @@
 /* variables */
 /* for switching themes */
 :root {
-    --main-color: #152028;
-    --secondary-color: #192734;
+    --main-color: #041420;
+    --secondary-color: #101e2a;
 
-    --border-color: #164D56;
+    --border-color: #0b4b54;
 
     --main-text: #fff;
     --secondary-text: #eeeeee;
 
     --theme-border: #fff;
     --preview-bg: rgb(25, 39, 52, 0.8);
-    --preview-shadow: #111921;
+    --preview-shadow: #0d2c4c;
 
-    --btn-color: #111921;
-    --btn-hover: #040608;
+    --btn-color: #0d2c4c;
+    --btn-hover: #174573;
     --highlight: #17a2b8;
 }
