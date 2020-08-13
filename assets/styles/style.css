@@ -90,7 +90,7 @@ p, li, span, label, input, textarea {
 }
 
 .main-container {
-    width: 1250px;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -371,7 +371,14 @@ p, li, span, label, input, textarea {
     color: var(--highlight);
     font-weight: 600;
 }
-/* CONTACT FORM */
+/* CONTACT PAGE */
+.contact-text a{
+    color: var(--nav-active);
+}
+.contact-text a:hover{
+    color: var(--btn-hover);
+}
+
 #contact-form {
     display: block;
     width: 100%;
@@ -399,6 +406,11 @@ p, li, span, label, input, textarea {
     background-color: var(--btn-color);
     border: none;
 }
+
+#submit-btn:hover {
+    background-color: var(--btn-hover);
+    cursor: pointer;
+} 
 
 #contact-form label {
     line-height: 2.7rem;
@@ -523,15 +535,25 @@ main {
     margin: 3% 0;
 }
 
+.pc-hide {
+    display: none;
+}
+
 /* Media queries */
 @media  screen and (max-width: 1200px) {
-    
+    .pc-hide {
+        display: none;
+    }
 }
 
 @media  screen and (max-width: 768px) {
 
     .mobile-hide {
         display: none;
+    }
+
+    .pc-hide {
+        display: block;
     }
 
     /* HAMBURGER STYLING and NAVIGATION*/
@@ -585,7 +607,7 @@ main {
     .menu .nav-link {
         display: inline-block;
         position: relative;
-        font-size: 4rem;
+        font-size: 3rem;
         padding: 1rem 0;
         font-weight: 400;
         text-decoration: none;
@@ -656,8 +678,65 @@ main {
         "left"
         "right";
     }
-
+    .mobile-links-home {
+        display: flex;
+        padding-top: 5%;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
     .right-column {
         justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .left-column {
+        padding: 0px;
+    }
+    .hero-links {
+        margin: 0 auto;
+    }
+    .about-me, .about-facts {
+        width: 90%;
+        margin: 0 auto;
+        padding-right: 18px;
+    }
+    .about-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 15px;
+    }
+    .post-heading {
+        margin-top: 25%;
+    }
+    .individual-project {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .circle-wrapper {
+        width: 90%;
+    }
+    .img-container img {
+        width: 100%;
+    }
+    .btn-project {
+        margin: 10% 0;
+    }
+    /* CONTACT */
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-text {
+        margin: 0 auto;
+    }
+    footer {
+        font-size: 11px;
     }
 }
