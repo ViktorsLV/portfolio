@@ -13,7 +13,11 @@
         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link id="theme-style" rel="stylesheet" href="">
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js" defer></script>
     <script src="assets/scripts/main.js" defer></script>
+    <script src="assets/scripts/contact.js" defer></script>
     <title>Viktor | Responsive Web Solutions </title>
 </head>
 
@@ -21,38 +25,38 @@
 
     <section class="section1">
         <!-- nav -->
-       
 
-            <div class="menu-btn">
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-                <div class="btn-line"></div>
-            </div>
 
-            <nav class="nav-wrapper menu">
-                <a href="index.html" class="dots-wrapper menu-logo mobile-hide">
-                    <div class="browser-dot mobile-hide" id="dot1"></div>
-                    <div class="browser-dot mobile-hide" id="dot2"></div>
-                    <div class="browser-dot mobile-hide" id="dot3"></div>
-                </a>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
 
-                <!-- nav items -->
-                <ul id="navigation" class="menu-nav">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html#skills" class="nav-link">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="projects.html" class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link current">Contact</a>
-                    </li>
-                    <div id="battery" class="fa mobile-hide"></div>
-                </ul>
-            </nav>
+        <nav class="nav-wrapper menu">
+            <a href="index.html" class="dots-wrapper menu-logo mobile-hide">
+                <div class="browser-dot mobile-hide" id="dot1"></div>
+                <div class="browser-dot mobile-hide" id="dot2"></div>
+                <div class="browser-dot mobile-hide" id="dot3"></div>
+            </a>
+
+            <!-- nav items -->
+            <ul id="navigation" class="menu-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link current">Contact</a>
+                </li>
+                <div id="battery" class="fa mobile-hide"></div>
+            </ul>
+        </nav>
 
     </section>
 
@@ -84,18 +88,20 @@
                     <div class="main-container">
                         <h3 class="post-heading">Contact Form</h3>
 
+                        <div class="alert">Your message has been sent!</div>
+
                         <form id="contact-form">
                             <label>Name</label>
-                            <input class="input-field" type="text" name="name">
+                            <input class="input-field" type="text" name="name" id="name" required>
 
                             <label>Subject</label>
-                            <input type="text" class="input-field" name="subject">
+                            <input type="text" class="input-field" name="subject" id="subject" required>
 
                             <label>Email</label>
-                            <input type="text" class="input-field" name="email">
+                            <input type="email" class="input-field" name="email" id="email" required>
 
                             <label>Message</label>
-                            <textarea name="message" class="input-field"></textarea>
+                            <textarea name="message" class="input-field" id="message" required></textarea>
 
                             <input type="submit" value="Send" id="submit-btn">
                         </form>

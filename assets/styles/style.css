@@ -421,6 +421,16 @@ p, li, span, label, input, textarea {
     font-size: 14px;
 }
 
+.alert {
+    text-align: center;
+    padding: 1%;
+    background: #569b56;
+    color: var(--main-text);
+    margin-bottom: 10px;
+    font-family: inherit;
+    display: none;
+}
+
 /* CONTACT PAGE */
 .contact-wrapper {
     display: flex;
@@ -533,6 +543,7 @@ main {
 
 .btn-project {
     margin: 3% 0;
+    text-align: center;
 }
 
 .pc-hide {
@@ -727,7 +738,7 @@ main {
         width: 100%;
     }
     .btn-project {
-        margin: 10% 0;
+        margin: 5% 0 10% 0;
     }
     /* CONTACT */
     .contact-wrapper {
