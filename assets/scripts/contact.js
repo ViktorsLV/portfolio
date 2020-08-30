@@ -59,6 +59,5 @@ function saveMessage(name, subject, email, message) {
     })
 }
 
-// soource: https://www.youtube.com/watch?v=PP4Tr0l08NE (Traversy Media)
-
+// source: https://www.youtube.com/watch?v=PP4Tr0l08NE (Traversy Media)
 //https://console.firebase.google.com/project/contact-form-portfolio-5f1e2/database/contact-form-portfolio-5f1e2/data

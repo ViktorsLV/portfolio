@@ -73,3 +73,14 @@ chargeBattery();
 
 // Run Animation every 5 Seconds
 setInterval(chargeBattery, 5000)
+
+
+// refreshing page on home when clicking on skills
+const refreshSkills = document.querySelector('.refresh')
+
+const refreshPage = () => {
+    location.reload();
+    console.log('xdd');
+}
+
+refreshSkills.addEventListener('click', refreshPage);
