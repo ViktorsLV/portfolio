@@ -64,45 +64,39 @@
             <div class="individual-project">
 
                 <div class="img-container">
-                    <img class="svale" src="assets/images/blokhus.png">
+                    <img class="svale" src="assets/images/forex_mac.png" width="50%">
                 </div>
 
                 <div class="code-link">
-                    <a href="https://viktorslv.github.io/Blokhus-Sport-Events/">See it live <i class="fas fa-external-link-alt fa-1.5x"></i></a>
-                    <a href="https://github.com/ViktorsLV/Blokhus-Sport-Events">Source code <i class="fab fa-github fa-1.5x"></i></a>
-                    <p>*Due to expired subscriptions some parts of dynamic content might be invisible</p>
+                    <a href="http://1079331@des-iis.ucn.dk/mmdi0919/1081601/Sem%201/MMD1/GroupSubmission/Version1/index.html">See it live <i class="fas fa-external-link-alt fa-1.5x"></i></a>
+                    <a href="https://github.com/ViktorsLV/Svalegaarden-Mest">Source code <i class="fab fa-github fa-1.5x"></i></a>
                 </div>
 
-                <h3>Dynamic webpage</h3>
+                <h3>Fully Custom API Solution</h3>
 
-                <p>Project in which some parts of the website had to be generated dynamically
+                <p>My first real experience with databases and backend development. The challenge was to build a fully working application where all CRUD operations could be performed.
                     <br>
                     <br>
-                    The clients wish was to display the upcoming events in an understandable manner and display stories from past events as well as a good introduction to other offers from Blokhus Sport & Events
+                    The focus was on integrating the 3 tiers - data tier, logic tier and presentation tier. Me and my work group had a freedom of choice of what kind of application are we building, so we proceeded with the idea of building an easily adaptable, user friendly forum solution. The main idea was that any company could adapt to the layout of our solution and integrate it in their business.
                     <br>
                     <br>
-                    In order to complete the task the project group decided to use a Content Management System (CMS) - WordPress. The project was made from scratch during the period of 4 weeks, including these steps:
-                    
+                    We were provided with the time frame of 4 weeks to complete our project and as a prerequisite we had to use MsSQL database.
+                    <br>
+                    <br>
+                    Before the making of the API many steps before were done:
                     <ul>
                         <li>- Thorough project planning</li>
-                        <li>- Collection of data (interviews)</li>
-                        <li>- Creation of Personas</li>
-                        <li>- Card sorting, content creation</li>
+                        <li>- Drawing of ERD</li>
+                        <li>- Data structure planning</li>
                         <li>- Low and high fidelity mock-ups</li>
-                        <li>- Set up of CMS systems</li>
-                        <li>- Testing</li>
-                        <li>- Structuring of content (Information Architecture)</li>
-                        <li>- SEO optimization</li>
+                        <li>- File and package set-up</li>
+                        <li>- Product pitch</li>
                     </ul>
                 </p>
 
                 <h5>My roles in the project:</h5>
                 <ul>
-                    <li>- Creation of Personas</li>
-                    <li>- UI Designer</li>
-                    <li>- Part of testing process</li>
-                    <li>- CMS set-up</li>
-                    <li>- Frontend Developer</li>
+                    <li>- Developer of the product</li>
                 </ul>
 
                 <h5>Technologies and tools used in the project:</h5>
@@ -110,42 +104,54 @@
                     <li class="circle">HTML5</li>
                     <li class="circle">CSS3</li>
                     <li class="circle">JavaScript</li>
+                    <li class="circle">Node.js</li>
+                    <li class="circle">npm</li>
+                    <li class="circle">SQL</li>
                     <li class="circle">Figma</li>
-                    <li class="circle">Photoshop</li>
-                    <li class="circle">Illustrator</li>
-                    <li class="circle">Trello</li>
-                    <li class="circle">WordPress</li>
-                    <li class="circle">REST API</li>
-                    <li class="circle">Miro</li>
+                    <li class="circle">Express</li>
                 </ul>
 
-
-                <h5>Sitemap</h5>
+                <h5>Entity Relationship Diagram (ERD)</h5>
+                <p>The ERD illustrates the key relationships between the entities</p>
                 <div class="img-container">
-                    <img src="assets/images/Blokhus/Site-map.PNG">
+                    <img src="assets/images/ForumX/ERD.PNG">
                 </div>
 
-                <h5>Low-fi prototypes & High-fi prototypes</h5>
+                <h5>SQL Database</h5>
+                <p>Illustration shows the coded table structure </p>
                 <div class="img-container">
-                    <img src="assets/images/Blokhus/low-fi.PNG">
+                    <img src="assets/images/ForumX/database.PNG">
                 </div>
 
-                <br>
+                <h5>Backend</h5>
+                <p>Express was a great help in structuring and setting up the routes for the endpoints. </p>
+                <p>In the module folder the Joi package was used for input validation and schema builder for our objects. </p>
+                <p>All the passwords were hashed and logged-in users information was stored in the local storage.</p>
+                <p>The application also benefited from different user roles where the Admin and Moderator roles had different permissions over the "normal members" of the forum.</p>
                 <div class="img-container">
-                    <img src="assets/images/Blokhus/high-gi.PNG">
+                    <img src="assets/images/ForumX/validate.PNG">
+                </div>
+                
+                <div class="img-container">
+                    <img src="assets/images/ForumX/routes.PNG">
                 </div>
 
-                <h5>Main Design Elements</h5>
-                <p>As the main focus of the project was to display the events dynamically it was also important to create a good visual hierarchy and strong information architecture. Several Design Patterns were used throughout the process to maximize the user experience.
-                </p>
+
+
+                <h5>Frontend</h5>
+                <p>To load the content on the presentation tier of the application the xhttp requests were used in an onload function to render the information on client side of the application</p>
                 <div class="img-container">
-                    <img src="assets/images/Blokhus/Events.PNG">
+                    <img src="assets/images/ForumX/requests.PNG">
                 </div>
 
-                <h5>Code Snippet</h5>
-                <p>GET requests were created to fetch data from WordPress API and connect it to our page</p>
+                <p>Home page</p>
+                <div class="img-container">
+                    <img src="assets/images/ForumX/home_screen.PNG">
+                </div>
+
+                <p>Users tab (admin)</p>
                 <div class="img-container last">
-                    <img src="assets/images/Blokhus/request.PNG">
+                    <img src="assets/images/ForumX/users.PNG">
                 </div>
 
             </div>

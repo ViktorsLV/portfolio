@@ -7,7 +7,6 @@ const menuLogo = document.querySelector('.menu-logo'); // all of the above need 
 const navItems = document.querySelectorAll('.nav-item'); // needs looping through 
 
 // Setting state of menu 
-
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
@@ -80,7 +79,7 @@ const refreshSkills = document.querySelector('.refresh')
 
 const refreshPage = () => {
     location.reload();
-    console.log('xdd');
+    // console.log('here');
 }
 
 refreshSkills.addEventListener('click', refreshPage);
