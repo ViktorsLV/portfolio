@@ -448,7 +448,7 @@ p, li, span, label, input, textarea {
 /* FOOTER */
 .footer {
     text-align: center;
-    height: 60px;
+    height: max-content;
     padding: 0.5rem;
     color: var(--main-color);
     background-color: var(--secondary-color);
